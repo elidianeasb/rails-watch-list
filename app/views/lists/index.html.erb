@@ -1,0 +1,7 @@
+<%= render "components/banner" %>
+
+<div class="cards m-5">
+  <% @lists.each do |list| %>
+    <%= render "components/card", list: list %>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<%= render "components/banner_show"%>
+
+<div class="cards">
+  <% @list.bookmarks.each do |bookmark| %>
+    <%= render "components/card_show", bookmark: bookmark %>
+  <% end %>
+</div>

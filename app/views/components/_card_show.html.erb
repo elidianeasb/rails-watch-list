@@ -1,0 +1,16 @@
+<div class="card-trip m-5">
+  <img src="<%= image_url(bookmark.movie.poster_url) %>" />
+  <div class="card-trip-infos">
+    <div>
+      <div class="d-flex">
+        <h2 class="me-1"><b><%= bookmark.movie.title %>     •</h2></b>
+        <h2><%= bookmark.movie.rating %>⭐</h2>
+      </div>
+      <h3><%= bookmark.movie.overview %></h3>
+      <div class="d-flex justify-content-between">
+        <h3><i class="fa-solid fa-quote-left"></i>  <%= bookmark.comment %></h3>
+        <%= link_to "Delete", bookmark_path(bookmark), data: { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' } %>
+      </div>
+    </div>
+  </div>
+</div>

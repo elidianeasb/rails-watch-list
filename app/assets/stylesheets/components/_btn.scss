@@ -1,0 +1,52 @@
+.btn-add a  {
+  text-decoration: none;
+  color:white;
+  font-size: 30px;
+}
+
+
+.btn-add {
+  background-color:$orange ;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: absolute;
+  top: 53%;
+  right: 5%;
+  padding: 10px 20px;
+  color:white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-add:hover {
+  background-color: $orange;
+  color:white;
+  transform: scale(1.1);
+  box-shadow: 0px 15px 20px rgba(173, 173, 148, 0.185);
+}
+
+.btn-create a  {
+  text-decoration: none;
+  color:white;
+  font-size: 30px;
+}
+
+
+.btn-create {
+  background-color:$orange ;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 10px 20px;
+  color:white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-create:hover {
+  background-color: $orange;
+  color:white;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 15px rgba(173, 173, 148, 0.226);
+}
