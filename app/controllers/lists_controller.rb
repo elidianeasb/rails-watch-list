@@ -18,8 +18,11 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to lists_path(@list.id)
+    if @list.save
+      redirect_to lists_path(@list.id), notice: "List was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
