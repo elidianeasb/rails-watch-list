@@ -1,4 +1,4 @@
-<div class="card-trip m-5">
+<div class="card-trip m-3">
   <img src="<%= image_url(bookmark.movie.poster_url) %>" />
   <div class="card-trip-infos">
     <div>
@@ -9,7 +9,11 @@
       <h3><%= bookmark.movie.overview %></h3>
       <div class="d-flex justify-content-between">
         <h3><i class="fa-solid fa-quote-left"></i>  <%= bookmark.comment %></h3>
-        <%= link_to "Delete", bookmark_path(bookmark), data: { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' } %>
+      </div>
+      <div class="d-flex justify-content-end">
+        <%= link_to bookmark, data: { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' } do %>
+          <i class="fa-solid fa-trash btn-delete"></i>
+        <% end %>
       </div>
     </div>
   </div>

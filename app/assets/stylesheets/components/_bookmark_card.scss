@@ -51,3 +51,10 @@
   top: -20px;
   width: 40px;
 }
+
+
+.card-trip:hover .btn-delete {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  color:rgb(172, 172, 172)
+}

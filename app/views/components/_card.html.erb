@@ -1,5 +1,12 @@
-<%= link_to list_path(list) do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path list.picture_url %>)">
-      <%= list.name %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path list.picture_url %>)">
+  <div class="d-flex justify-content-end">
+    <%= link_to list, data: { "turbo-method": :delete, "turbo-confirm": 'Are you sure?' } do %>
+      <i class="fa-solid fa-trash btn-delete "></i>
+    <% end %>
   </div>
-<% end %>
+  <div class="d-flex justify-content-center align-items-center mt-4">
+    <%= link_to list_path(list) do %>
+        <%= list.name %>
+    <% end %>
+  </div>
+</div>

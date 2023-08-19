@@ -4,4 +4,9 @@
   <% @lists.each do |list| %>
     <%= render "components/card", list: list %>
   <% end %>
+  <%= link_to new_list_path do %>
+    <div class="card-category card-border d-flex justify-content-center align-items-center">
+      <i class="fa-solid fa-circle-plus"></i>
+    </div>
+  <% end %>
 </div>

@@ -1,7 +1,12 @@
-<%= render "components/banner_show"%>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path @list.picture_url %>');">
+  <h1><%= @list.name %></h1>
+</div>
 
-<div class="cards">
+  <%= link_to new_list_bookmark_path(@list) do %>
+   <i class="fa-solid fa-circle-plus btn-add"></i>
+  <% end %>
+<div class="cards m-5">
   <% @list.bookmarks.each do |bookmark| %>
-    <%= render "components/card_show", bookmark: bookmark %>
+    <%= render "components/bookmark_card", bookmark: bookmark %>
   <% end %>
 </div>
